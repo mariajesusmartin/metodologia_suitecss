@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+h1 , h2 , h3 , h4 , h5 , h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+    display: block;
+}
+p a{
+    display: inline;
+}
+img , picture , video , iframe , svg {
+    display: block;
+    width: 100%;
+    height: initial;
+}
+svg{
+    fill: currentColor;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    font-size: 100%;
+
+    --c-secundario: #d4d4d4;
+    --pad-70: 70px;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+.Header{
+    width: 100%;
+    padding: 3.125rem var(--pad-70);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.Header-img{
+    width: 80%;
+}
+
+.Header-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.875rem;
+}
+.Header-li{
+    list-style: none;
+    font-weight: 600;
+    font-size: .875rem;
+}
+
+.Header-li:hover{
+    color: var(--c-secundario);
+}
+
+.Header-li--click{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.Header-li--click:hover{
+    color: black;
+}
+
+.Header-svg{
+    display: none;
+}
+
+.Section{
+    width: 100%;
+    padding: 3.125rem var(--pad-70);
+}
+.Section-p{
+    max-width: 60%;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.Main{
+    width: 100%;
+    padding: 0 4.375rem;
+}
+
+.Main-ul{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 1.875rem; 
+}
+.Main-img{
+    width: 100%;
+    height: 100%;
+}
+
+.Button{
+    padding: 3.125rem 0 6.25rem 0;
+
+}
+.Button-a{
+    width: 20%;
+    margin: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+}
+.Button-svg{
+    width: .9375rem;
+}
+
+.Button-text{
+    font-weight: 500;
+}
+
+.Footer{
+    width: 100%;
+    padding: 1.875rem var(--pad-70);
+    border-top: 1px solid var(--c-secundario);
+
+    font-size: .75rem;
+    font-weight: 500;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Footer-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem
+}
+
+.Footer-li:hover{
+    color: var(--c-secundario);
+}
+
+@media (max-width: 1024px){
+    .Header-ul{
+        display: none;
+    }
+    
+    .Header-svg{
+        width: 150%;
+        display: inline;
+    }
+
+    .Header-img{
+        width: 100%;
+    }
+    
+    .Section-p{
+        max-width: 80%;
+    }
+
+    .Main-ul{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 1.875rem; 
+    }
+
+    .Button{
+        font-size: 1.25rem;
+    }
+
+    .Footer{
+        font-size: 1rem;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.875rem;
+    }
+}
+
+@media (max-width:480px){
+    .Section{
+        max-width: 100%;
+        padding: 0 4.375rem 3.125rem var(--pad-70);
+    }
+
+    .Main-ul{
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+        gap: 1.875rem; 
+    }
+    .Button-a{
+        width: 50%;
+    }
+    
+    .Footer{
+        padding: 1.875rem 1.875rem;
+    }
+
+}
+
+@media (min-width: 2000px){
+    body{
+        max-width: 90%;
+        margin: auto;
+    }
+}
